@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us & Book Appointment - Dr. Sohail Magoon</title>
+    <title>Contact Us & Book Appointment - Dr. Sohail Farooq Magoo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <h2>Dr. Sohail F. Magoon</h2>
+                <h2>Dr. Sohail Farooq Magoo</h2>
                 <p class="subtitle">Pain Management Specialist</p>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -51,31 +51,40 @@
                     
                     <div class="info-item">
                         <strong>📍 Address:</strong>
-                        <p>Medical Complex, Main Boulevard<br>Rawalpindi, Punjab, Pakistan</p>
+                        <p>Chowk Aziz Hotel, Opposite Railway Ground, Multan Cantt, Pakistan</p>
                     </div>
                     
                     <div class="info-item">
                         <strong>📞 Phone:</strong>
-                        <p>+92-XXX-XXXXXXX</p>
+                        <p>0308-7777614</p>
                         <p class="info-note">Call for appointments and inquiries</p>
                     </div>
                     
                     <div class="info-item">
                         <strong>✉️ Email:</strong>
-                        <p>info@drsohailmagoon.com</p>
+                        <p>drmagoon@gmail.com</p>
                         <p class="info-note">We respond within 24 hours</p>
                     </div>
                     
-                    <div class="info-item">
-                        <strong>🕐 Working Hours:</strong>
-                        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
-                        <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
-                        <strong>Sunday:</strong> Closed</p>
-                    </div>
+                   <div class="info-item">
+    <strong>🕐 Working Hours:</strong>
+    <p>
+        <strong>Monday - Friday:</strong>
+        Registration: 10:00 AM – 1:00 PM<br>
+        Procedures: 1:00 PM – 6:00 PM<br><br>
+
+        <strong>Saturday:</strong>
+        Registration: 10:00 AM – 12:30 PM<br>
+        Procedures: 12:30 PM – 4:00 PM<br><br>
+
+        <strong>Sunday:</strong> Closed
+    </p>
+</div>
+
                     
                     <div class="info-item">
                         <strong>🚨 Emergency Contact:</strong>
-                        <p>For urgent matters: +92-XXX-XXXXXXX</p>
+                        <p>For urgent matters: 0308-7777614</p>
                         <p class="info-note">Available 24/7 for existing patients</p>
                     </div>
 
@@ -189,26 +198,28 @@
                         <p class="form-note">* Required fields. We'll contact you within 24 hours to confirm your appointment. For immediate assistance, please call us directly.</p>
                     </form>
                 </div>
+
+                
             </div>
         </div>
     </section>
-
+ 
     <!-- Map Section -->
     <section class="map-section">
         <div class="container">
             <h2 class="section-title">Visit Our Clinic</h2>
             <div class="map-placeholder">
                 <div class="map-overlay">
-                    <h3>📍 Medical Complex, Main Boulevard</h3>
-                    <p>Rawalpindi, Punjab, Pakistan</p>
-                    <p class="map-note">Click to open in Google Maps</p>
+                    <h3>📍 Chowk Aziz Hotel, Opposite Railway Ground</h3>
+                    <p>Multan Cantt, Pakistan</p>
+                    <!-- <p class="map-note">Click to open in Google Maps</p> -->
                 </div>
             </div>
             <div class="directions-info">
                 <h3>Getting Here</h3>
-                <p><strong>By Car:</strong> Free parking available on site. Main entrance on Boulevard Road.</p>
+                <p><strong>By Car:</strong> Free parking available on site. Main entrance on Chowk Aziz Hotel, Opposite Railway Ground.</p>
                 <p><strong>By Public Transport:</strong> Multiple bus routes stop within 200m of the clinic.</p>
-                <p><strong>Landmarks:</strong> Located near [Major Landmark], easily accessible from all parts of the city.</p>
+                <p><strong>Landmarks:</strong> Located near Chowk Aziz Hotel, easily accessible from all parts of the city.</p>
             </div>
         </div>
     </section>
@@ -260,47 +271,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Dr. Sohail F. Magoon</h3>
-                    <p>Pain Management & Prolotherapy Specialist</p>
-                    <p>Dedicated to providing innovative, non-surgical pain relief solutions.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="treatments.html">Treatments</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#prolotherapy">Prolotherapy</a></li>
-                        <li><a href="treatments.html#joint-pain">Joint Pain Treatment</a></li>
-                        <li><a href="treatments.html#back-neck">Back & Neck Pain</a></li>
-                        <li><a href="treatments.html#sports-injury">Sports Injuries</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Dr. Sohail Farooq Magoon. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+ <div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
 
     <script src="script.js"></script>
 </body>

@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <h2>Dr. Sohail F. Magoon</h2>
+                <h2>Dr. Sohail Farooq Magoo</h2>
                 <p class="subtitle">Pain Management Specialist</p>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -202,4 +202,20 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Don't See Your Condition Listed?</h
+                <h2>Don't See Your Condition Listed?</h2>
+                <p>We treat a wide range of pain and musculoskeletal conditions. Schedule a consultation to discuss your specific case and personalized treatment options.</p>
+                
+            </div>
+        </div>
+    </section>
+    
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

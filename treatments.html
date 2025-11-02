@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <h2>Dr. Sohail F. Magoon</h2>
+                <h2>Dr. Sohail Farooq Magoo</h2>
                 <p class="subtitle">Pain Management Specialist</p>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -216,47 +216,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Dr. Sohail F. Magoon</h3>
-                    <p>Pain Management & Prolotherapy Specialist</p>
-                    <p>Dedicated to providing innovative, non-surgical pain relief solutions.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="treatments.html">Treatments</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#prolotherapy">Prolotherapy</a></li>
-                        <li><a href="treatments.html#joint-pain">Joint Pain Treatment</a></li>
-                        <li><a href="treatments.html#back-neck">Back & Neck Pain</a></li>
-                        <li><a href="treatments.html#sports-injury">Sports Injuries</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Dr. Sohail Farooq Magoon. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
 
     <script src="script.js"></script>
 </body>
