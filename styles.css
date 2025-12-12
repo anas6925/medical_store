@@ -272,18 +272,20 @@ img {
     content: '';
     position: absolute;
     left: 7px;
-    top: 18px;
+    top: 18px;  /* ❌ REMOVE THIS HARDCODED VALUE */
     width: 0;
     height: 0;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
     border-left: 12px solid var(--accent-color);
 }
+
 .expert-link {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
 }
+
 .expert-link:hover {
     color: black;
 }
