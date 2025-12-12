@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sohail Farooq Magoo (MBBS,PGD) - Pain Management & Prolotherapy Specialist</title>
+   <link rel="stylesheet" href="./styles.css">
+   <style>
+        /* Testimonials Slider Styles */
+        .testimonials-slider-wrapper {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%;
+            min-width: 100%;
+            background: white;
+            border-radius: 10px;
+            animation: slideIn 0.5s ease-out;
+            position: relative;
+    padding: 40px 80px; 
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            color: #f39c12;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: #2c3e50;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+
+        .patient-name {
+            color: #1e5a7d;
+            font-weight: 700;
+            text-align: right;
+            font-size: 1.05rem;
+        }
+
+        /* Navigation Arrows */
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #1e5a7d, #3d92c4);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+
+        .slider-button:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Pagination Dots */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background: #1e5a7d;
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        /* Slide Counter */
+        .slide-counter {
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-top: 15px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .testimonial-card {
+                padding: 25px 18px;
+            }
+            .slider-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            .prev-btn { left: 10px; }
+            .next-btn { right: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>SOHAIL PAIN </h2>
+                <p class="subtitle">Clinic</p>
+            </div>
+          
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="conditions.html">Conditions</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html#appointment" class="cta-nav">Book Appointment</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-expert">EXPERT IN:</h1>
+
+             <ul class="expert-items">
+    <li><a href="#prolotherapy" class="expert-link">PROLOTHERAPY</a></li>
+    <li><a href="#musculoskeletal-pains" class="expert-link">CURING MUSCULOSKELETAL PAINS</a></li>
+    <li><a href="#orthobiology" class="expert-link">ORTHOBIOLOGY XX</a></li>
+    <li><a href="#ozone-therapy" class="expert-link">OZONE 03 THERAPY</a></li>
+    <li><a href="#aesthetics" class="expert-link">MEDICAL AESTHETICS</a></li>
+    <li><a href="#fat-clinic" class="expert-link">FAT CLINIC</a></li>
+</ul>
+
+
+
+                <p class="hero-subtitle">Non-surgical solutions for chronic pain, joint injuries, and sports-related injuries</p>
+                <div class="hero-buttons">
+                    <a href="contact.html#appointment" class="btn btn-primary">Book Appointment</a>
+                    <a href="termsandservices.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Services Overview -->
+<section class="services-overview">
+    <div class="container">
+        <div class="service-cards">
+
+            <div class="service-card" id="prolotherapy">
+    <div class="icon">💉</div>
+    <h3>Prolotherapy</h3>
+    <p>Shoulder, knee and back regenerative treatment</p>
+    <a href="services.html#prolotherapy" class="learn-more">Learn More →</a>
+</div>
+
+
+            <div class="service-card" id="musculoskeletal-pains">
+                <div class="icon">🩺</div>
+                <h3>Musculoskeletal Pains</h3>
+                <p>Comprehensive chronic pain solutions</p>
+                <a href="services.html#pain-management" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" id="musculoskeletal-pains">
+                <div class="icon">⚽</div>
+                <h3>Sports Injuries</h3>
+                <p>Non-surgical recovery methods</p>
+                <a href="treatments.html#sports-injury" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" id="musculoskeletal-pains">
+                <div class="icon">🦴</div>
+                <h3>Joint Treatment</h3>
+                <p>Shoulder, knee, hip pain relief</p>
+                <a href="treatments.html#joint-pain" class="learn-more">Learn More →</a>
+            </div>
+
+            <!-- NEW SERVICE CARDS BELOW -->
+
+            <div class="service-card" id="orthobiology">
+                <div class="icon">🧬</div>
+                <h3>Orthobiology XX</h3>
+                <p>Advanced cellular therapies for tissue regeneration</p>
+                <a href="services.html#orthobiology" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" id="ozone-therapy">
+                <div class="icon">🌬️</div>
+                <h3>Ozone O3 Therapy</h3>
+                <p>Oxygen-based healing for inflammation and immunity</p>
+                <a href="services.html#ozone-therapy" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" id="aesthetics">
+                <div class="icon">💆‍♀️</div>
+                <h3>Medical Aesthetics</h3>
+                <p>Skin rejuvenation & cosmetic enhancement treatments</p>
+                <a href="services.html#aesthetics" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" id="fat-clinic">
+                <div class="icon">🔥</div>
+                <h3>FAT CLINIC</h3>
+                <p>Non-invasive body contouring & fat reduction solutions</p>
+                <a href="services.html#fat-clinic" class="learn-more">Learn More →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+      <!-- <section class="treatments-section">
+        <div class="container">
+            <h2 class="section-title">Obesity & Body Sculpting Solutions</h2>
+            <p class="section-intro">Advanced non-surgical treatments for fat reduction and body contouring with results you can see in hours</p>
+            <div class="treatments-grid">
+                <div class="obesity-card">
+                    <div class="obesity-image">
+                        <img src="images/image1.jpg" alt="Hydrolipoclasia Ozonoid Treatment">
+                    </div>
+                    <div class="obesity-content">
+                        <span class="obesity-badge">Hydrolipoclasia</span>
+                        <h3>Get Rid of Hanging Abdomen</h3>
+                        <p>Advanced ozone-based fat melting solution for stubborn belly fat in just 3 hours</p>
+                        <ul class="obesity-features">
+                            <li>Non-invasive procedure</li>
+                            <li>Results in 3 hours</li>
+                            <li>No downtime required</li>
+                        </ul>
+                        <a href="contact.html#appointment" class="obesity-cta">Book Consultation →</a>
+                    </div>
+                </div>
+
+                <div class="obesity-card">
+                    <div class="obesity-image">
+                        <img src="images/image3.jpeg" alt="Body Sculpting Results">
+                    </div>
+                    <div class="obesity-content">
+                        <span class="obesity-badge">Fat Melting</span>
+                        <h3>Body Contouring & Sculpting</h3>
+                        <p>Transform your body with our multi-technology approach to fat reduction and skin tightening</p>
+                        <ul class="obesity-features">
+                            <li>Visible results in 3 hours</li>
+                            <li>No surgical intervention</li>
+                            <li>Permanent fat reduction</li>
+                        </ul>
+                        <a href="contact.html#appointment" class="obesity-cta">Book Consultation →</a>
+                    </div>
+                </div>
+
+                <div class="obesity-card">
+                    <div class="obesity-image">
+                        <img src="images/image2.jpg" alt="Advanced Fat Reduction Technologies">
+                    </div>
+                    <div class="obesity-content">
+                        <span class="obesity-badge">Multi-Technology</span>
+                        <h3>Advanced Fat Reduction</h3>
+                        <p>Comprehensive solutions combining multiple technologies for optimal body sculpting results</p>
+                        <ul class="obesity-features">
+                            <li>Ozone therapy</li>
+                            <li>Laser treatment</li>
+                            <li>Ultrasonic cavitation</li>
+                        </ul>
+                        <a href="contact.html#appointment" class="obesity-cta">Book Consultation →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+   <section class="treatments-section">
+    <div class="container">
+        <h2 class="section-title">Obesity & Body Sculpting Solutions</h2>
+        <p class="section-intro">Advanced non-surgical treatments for fat reduction and body contouring with results you can see in hours</p>
+        <div class="treatments-grid">
+
+            <!-- Knee Pain -->
+            <div class="obesity-card">
+                <div class="obesity-content">
+                    <h3>Prolotherapy for Knee Pain – Key Benefits</h3>
+                    <ul class="obesity-features">
+                        <li>Helps repair weakened knee ligaments and tendons, improving overall joint stability.</li>
+                        <li>Reduces chronic knee pain caused by arthritis, ligament laxity, and overuse injuries.</li>
+                        <li>Stimulates natural tissue regeneration to strengthen the knee structure.</li>
+                        <li>Improves mobility, flexibility, and weight-bearing function in the knee.</li>
+                        <li>Offers a non-surgical alternative for conditions like osteoarthritis and meniscus-related pain.</li>
+                        <li>Provides long-term relief by addressing root causes rather than masking symptoms.</li>
+                    </ul>
+                    <a href="services.html#prolotherapy" class="obesity-cta">More →</a>
+                </div>
+            </div>
+
+            <!-- Shoulder Pain -->
+            <div class="obesity-card">
+                <div class="obesity-content">
+                    <h3>Prolotherapy for Shoulder Pain – Key Benefits</h3>
+                    <ul class="obesity-features">
+                        <li>Strengthens loose or damaged shoulder ligaments, improving shoulder stability.</li>
+                        <li>Effective for chronic rotator cuff issues, tendonitis, and shoulder instability.</li>
+                        <li>Stimulates the body’s natural healing response to regenerate tissue.</li>
+                        <li>Reduces pain caused by repetitive strain, sports injuries, and degeneration.</li>
+                        <li>Enhances shoulder mobility, flexibility, and lifting ability.</li>
+                        <li>Minimally invasive option that avoids surgery and promotes natural recovery.</li>
+                        <li>Supports faster recovery for athletes and active individuals returning to sports.</li> <!-- Added point -->
+                    </ul>
+                    <a href="services.html#prolotherapy" class="obesity-cta">More →</a>
+                </div>
+            </div>
+
+            <!-- Back Pain -->
+            <div class="obesity-card">
+                <div class="obesity-content">
+                    <h3>Prolotherapy for Back Pain – Key Benefits</h3>
+                    <ul class="obesity-features">
+                        <li>Targets weak ligaments in the spine that often contribute to chronic low-back pain.</li>
+                        <li>Helps reduce pain from ligament laxity, disc degeneration, and SI joint dysfunction.</li>
+                        <li>Promotes tissue repair and strengthens the supportive structures around the spine.</li>
+                        <li>Improves posture, mobility, and daily movement comfort.</li>
+                        <li>Offers long-lasting relief by treating the underlying structural cause.</li>
+                        <li>Non-surgical and safe for individuals seeking a natural, regenerative approach.</li>
+                        <li>Enhances core stability, helping prevent future episodes of back pain.</li> <!-- Added point -->
+                    </ul>
+                    <a href="services.html#prolotherapy" class="obesity-cta">More →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-preview-content">
+                <div class="about-preview-image">
+                    <div class="about-preview-image">
+    <!-- <img src="images/drmagoon.jpeg" alt="Dr. Magoo" class="clinic-image"> -->
+</div>
+                </div>
+                <div class="about-preview-text">
+                    <h2>Meet Dr. Sohail Farooq Magoo (MBBS,PGD)</h2>
+                    <p class="lead">Board-certified Pain Physician dedicated to providing innovative, non-surgical treatment solutions.</p>
+                    <p>With over 40+ years of experience in interventional pain management and regenerative medicine, Dr. Magoo has helped thousands of patients achieve lasting pain relief without surgery.</p>
+                    <blockquote class="philosophy">
+                        "My approach is simple: treat the root cause, not just the symptoms. Every patient deserves a personalized treatment plan that addresses their unique pain condition."
+                    </blockquote>
+                    <a href="about.html" class="btn btn-primary">Read Full Biography</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">✓</div>
+                    <h3>44+ Years Experience</h3>
+                    <p>Extensive expertise in pain management and regenerative medicine</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✓</div>
+                    <h3>Non-Surgical Approach</h3>
+                    <p>Focus on healing without invasive procedures</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✓</div>
+                    <h3>Personalized Care</h3>
+                    <p>Custom treatment plans for each patient</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✓</div>
+                    <h3>Proven Results</h3>
+                    <p>Thousands of satisfied patients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Preview -->
+ <section class="testimonials-preview">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"After years of chronic knee pain, I was ready to schedule surgery. Dr. Magoo suggested prolotherapy instead. Three months later, I'm pain-free and back to running!"</p>
+                        <p class="patient-name">- Sarah K.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"The care I received was exceptional. Dr. Magoo took the time to explain everything and genuinely cared about my recovery."</p>
+                        <p class="patient-name">- Ahmed R.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"I was skeptical about non-surgical treatments, but prolotherapy exceeded my expectations. My back pain is 90% improved."</p>
+                        <p class="patient-name">- M.A.</p>
+                    </div>
+                </div>
+
+                <button class="slider-button prev-btn" id="prevBtn">❮</button>
+                <button class="slider-button next-btn" id="nextBtn">❯</button>
+            </div>
+
+            <div class="slider-dots" id="sliderDots"></div>
+            <div class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">3</span></div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="testimonials.html" class="btn btn-secondary">Read More Testimonials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey to Pain-Free Living?</h2>
+                <p>Schedule a consultation today and discover how we can help you achieve lasting relief.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#appointment" class="btn btn-primary btn-large">Book Your Appointment</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+    <!-- Testimonials Slider Script -->
+    <script>
+        const slider = document.getElementById('testimonialsSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('sliderDots');
+        const currentSlideSpan = document.getElementById('currentSlide');
+        const totalSlidesSpan = document.getElementById('totalSlides');
+
+        const cards = document.querySelectorAll('.testimonial-card');
+        const totalCards = cards.length;
+        let currentIndex = 0;
+        let autoPlayTimer;
+
+        // Create dots
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalCards; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            totalSlidesSpan.textContent = totalCards;
+        }
+
+        // Update slider position
+        function updateSlider() {
+            const translateValue = -currentIndex * 100;
+            slider.style.transform = `translateX(${translateValue}%)`;
+
+            // Update dots
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+
+            // Update counter
+            currentSlideSpan.textContent = currentIndex + 1;
+        }
+
+        // Next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateSlider();
+        }
+
+        // Previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateSlider();
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        // Auto-play function
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            startAutoPlay();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+                resetAutoPlay();
+            }
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                resetAutoPlay();
+            }
+        });
+
+        // Pause on hover
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayTimer);
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Initialize
+        createDots();
+        updateSlider();
+        startAutoPlay();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
