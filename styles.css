@@ -271,7 +271,7 @@ img {
     content: '';
     position: absolute;
     left: 7px;
-    top: 65%;
+    top: 60%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
@@ -3226,4 +3226,3 @@ img {
     }
     
 }
-
