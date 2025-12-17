@@ -62,11 +62,12 @@ img {
     display: block;
 }
 
-
 .clinic-image {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;                 
+    max-height: 420px;           
+    object-fit: contain;         
+    object-position: top center; 
     border-radius: 10px;
     margin-bottom: 12px;
 }
@@ -3226,3 +3227,4 @@ img {
     }
     
 }
+
